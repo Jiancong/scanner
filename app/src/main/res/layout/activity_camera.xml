@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <SurfaceView
+        android:id="@+id/surfaceview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.fzcyjh.invoicescanner.views.PreviewBorderView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/borderview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        app:tipTextSize="16dp"
+        />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="5">
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:background="@color/colorBkgColor"
+            android:layout_weight="1">
+            <Button
+                android:id="@+id/btn_close"
+                android:layout_marginTop="30dp"
+                android:text="退出"
+                android:background="@color/colorTest1"
+                android:textSize="16sp"
+                android:textColor="#ffffffff"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                />
+            <Button
+                android:id="@+id/btn_setting"
+                android:layout_marginTop="20dp"
+                android:text="设置"
+                android:textSize="16sp"
+                android:layout_height="30dp"
+                android:background="@color/colorTest2"
+                android:textColor="#ffffffff"
+                android:layout_below="@id/btn_close"
+                android:layout_width="match_parent"
+                />
+            <Button
+                android:id="@+id/btn_takephoto"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@mipmap/img_takephoto"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>
